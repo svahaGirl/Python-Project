@@ -1,0 +1,27 @@
+import subprocess
+# code = subprocess.call('notepad.exe')
+# if code == 0:
+    # print("Success!")
+# else:
+#   print("Error!")
+
+# code1 = subprocess.call(["ping", "www.yahoo.com"])
+
+#program = "notepad.exe"
+#process = subprocess.Popen(program)
+#code = process.wait()
+#print(code)
+# ubprocess.Popen(program)
+
+# subprocess.Popen(["ls", "-1"])
+
+
+args =["ping", "www.yahoo.com"]
+process = subprocess.Popen(args,
+                            stdout=subprocess.PIPE)
+
+data = process.communicate()
+print(data)
+
+import sys
+print(sys.argv)
